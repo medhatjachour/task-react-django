@@ -1,5 +1,7 @@
 // eslint-disable-next-line no-unused-vars
 import React, { useState, useEffect } from "react";
+import {  Navigate } from "react-router-dom"
+
 import api from "../api";
 import Note from "../components/Note";
 import "../styles/Home.css";
@@ -42,7 +44,10 @@ const Home = () => {
       })
       .catch((err) => alert(err));
   };
-
+const LogoutFun = ()=>{
+  localStorage.clear()
+  return <Navigate to="/login" />
+}
   return (
     <div>
       {" "}
@@ -77,6 +82,9 @@ const Home = () => {
           <br />
           <input type="submit" value="Submit"></input>
         </form>
+      </div>
+      <div>
+        <button onClick={()=>LogoutFun}> Logout</button>
       </div>
     </div>
   );

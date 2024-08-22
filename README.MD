@@ -40,7 +40,7 @@ To get started with the project, follow these steps:
     cd backend
     python manage.py makemigrations
     python manage.py migrate
-    python manage.py runserver
+    python manage.py runserver 8001
     ```
 
 -Frontend
