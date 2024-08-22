@@ -12,6 +12,7 @@ A full-stack note-taking application built with Django and React. The backend is
 - **CREATE_NOTES**: Create a new note.
 - **DELETE_NOTES**: Delete the note .
 - **Delete user**: Deletes all related notes.
+- **NOT FOUND**: 404 NOT Found Page.
 
 ## Installation
 - Backend
@@ -36,6 +37,7 @@ To get started with the project, follow these steps:
     ```
 4. **Run the Django server  **:
     ```bash
+    cd backend
     python manage.py makemigrations
     python manage.py migrate
     python manage.py runserver
