@@ -34,22 +34,11 @@ To get started with the project, follow these steps:
     ```bash
     pip install -r requirements.txt
     ```
-5. **Run the Django server  **:
+4. **Run the Django server  **:
     ```bash
+    python manage.py makemigrations
     python manage.py migrate
     python manage.py runserver
-    ```
-
-5. **Set up the database**:
-    - Ensure you have a running instance of MySQL.
-    - Create a `.env` file in the root directory and add your MySQL connection details:
-      ```env
-      DATABASE_URL=mysql+pymysql://username:password@localhost/sales_store
-      ```
-
-6. **Run the application**:
-    ```bash
-    python main.py
     ```
 
 -Frontend
@@ -72,9 +61,9 @@ To get started with the project, follow these steps:
 - **Create, read, update, and delete notes.**: Create notes as much as you want
 ## API Endpoints
 1. Authentication
-- POST /api/auth/register/ - Register a new user
-- POST /api/auth/login/ - Login and obtain JWT token
-- POST /api/auth/logout/ - Logout user
+- POST /api/user/register/ - Register a new user
+- POST /api/user/login/ - Login and obtain JWT token
+- POST /api/user/logout/ - Logout user
 2. Notes
 - GET /api/notes/ - Get all notes
 - POST /api/notes/ - Create a new note
